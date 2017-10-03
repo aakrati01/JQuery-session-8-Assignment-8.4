@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jumbotron with show and hide buttons</title>
+
+	<!--........... Including bootstrap and jQuery............... -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		button{
+			margin: 10px;
+		}
+		.para{
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<!-- ........ Buttons with functions...........-->
+	<button onclick="showDiv();">Show All</button>
+	<button onclick="hideDiv();">Hide All</button>
+	<button onclick="fontsize();">Change font size</button>
+	<button onclick="colour();">Change font colour</button>
+	<br>
+	<br>
+	<!--........ class jumbotron within a div..........-->
+	<div class="container">
+		<div class="jumbotron">
+		    <h1>This is a jumbotron</h1>      
+		    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
+		</div>
+  	</div>
+	<div class="para">
+		<p>Et mea aeque platonem, assentior liberavisse ei duo. Sed ne ullum option delicatissimi, ridens legendos omittantur no ius, his no ubique euripidis. Vulputate consetetur cotidieque eum an, nam no affert percipit voluptatum, impedit honestatis ea per. Homero populo vis ne, at lucilius liberavisse sed. Tritani alterum epicuri pro an, vis possim officiis te. No nibh case suavitate mel, mei esse zril periculis ut, mazim ancillae sea in. Impetus accusamus vel et.</p>
+  	
+		<p>Et mea aeque platonem, assentior liberavisse ei duo. Sed ne ullum option delicatissimi, ridens legendos omittantur no ius, his no ubique euripidis. Vulputate consetetur cotidieque eum an, nam no affert percipit voluptatum, impedit honestatis ea per. Homero populo vis ne, at lucilius liberavisse sed. Tritani alterum epicuri pro an, vis possim officiis te. No nibh case suavitate mel, mei esse zril periculis ut, mazim ancillae sea in. Impetus accusamus vel et.</p>
+	</div>
+	<!-- Script tag -->
+  	<script type="text/javascript">
+
+		/* this function will select all div using jQuery selector and hide it */
+  		var hideDiv = function(){
+			// select element using tag name
+			$('div').hide();
+		};
+
+		/* this function will select all div using jQuery selector and show it */
+		var showDiv = function(){
+			// select element using tag name
+			$('div').show();
+
+		};
+
+		var fontsize = function(){
+			$('div').css("font-size", "8px");
+		};
+
+		var colour = function(){
+			$('.jumbotron').css("color","red");
+		};
+		
+  </script>
+
+</body>
+</html>
